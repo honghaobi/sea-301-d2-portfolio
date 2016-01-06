@@ -1,17 +1,33 @@
 body {
-  padding: 1em;
+  line-height: 1.5;
+  font-size: 100%;
+  color: #313131;
 }
 
-main {
-  margin: auto;
+hr {
+  margin: 1em;
   width: 80%;
+}
+
+/*TEXT STYLES
+=======================================*/
+p {
+  font-size: 1em;
 }
 
 address {
   display: inline-block;
 }
 
-hr {
-  margin: 1em;
-  width: 80%;
+/*LINK STYLES
+=======================================*/
+
+a, a:link, a:active {
+  color: #777;
+}
+
+a:hover, a:focus {
+}
+
+a:visited {
 }

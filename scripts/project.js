@@ -10,23 +10,19 @@ function Project (opts) {
 
 Project.prototype.toHtml = function() {
   var $newProject = $('project.template').clone();
+  $newProject.removeClass('template');
 
-  $newProject.data('title', this.title);
-  $newProject.data('category', this.category);
-  $newProject.data('publishedOn', this.publishedOn);
-  $newProject.data('about', this.about)
 
-  // Include the publication date as a 'title' attribute to show on hover:
+  $newProject.attr('data-category', this.category);
+
+
+  $newProject.find('h1:first').html(this.title);
+  $newProject.find('.project-about').html(this.about);
+  $newProject.find('time[pubdate]').attr('datetime', this.publishedOn)
   $newProject.find('time[pubdate]').attr('title', this.publishedOn)
-
-  // Display the date as a relative number of "days ago":
   $newProject.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago')
-
   $newProject.append('<hr>');
-
-  // TODO: This cloned article is no longer a template, so we should remove that class...
-  $('project').removeClass('template');
-  return $newArticle;
+  return $newProject;
 }
 
 rawData.sort(function(a,b) {
@@ -34,9 +30,9 @@ rawData.sort(function(a,b) {
 });
 
 rawData.forEach(function(ele) {
-  articles.push(new Article(ele));
+  projects.push(new Project(ele));
 })
 
-articles.forEach(function(a){
-  $('#articles').append(a.toHtml())
+projects.forEach(function(a){
+  $('#projects').append(a.toHtml())
 });
