@@ -1,8 +1,33 @@
-.template {
-  display: none;
+
+.site-header {
+  padding: .1em;
+  background-color: #0072BB;
 }
 
-.draft {
+.main-nav {
+  padding: 0;
+  list-style: none;
+  clear: both;
+}
+
+.main-nav li {
+  margin-right: .4em;
+  font-size: 1.5em;
+  padding: .5em .2em;
+  border-bottom: 1px solid #ccc;
+}
+
+#filters {
+  padding: 0;
+  width: 100%;
+  list-style: none;
+}
+
+#filters select {
+
+}
+
+.template {
   display: none;
 }
 
@@ -13,7 +38,6 @@
 .byline a {
   font-weight: bold;
   text-decoration: none;
-  color: inherit;
 }
 
 .pull-left {
