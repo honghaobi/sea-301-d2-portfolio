@@ -22,5 +22,11 @@ var rawData = [
     category:    'graphic',
     publishedOn: '2015-07-25',
     about: 'created a brochure to market companys residential projects'
+  },
+  {
+    title:       'truffle website initial design',
+    category:    'web',
+    publishedOn: '2013-03-15',
+    about: 'dating site startup initail mockups'
   }
 ]

@@ -18,8 +18,7 @@ projectView.handleCategoryFilter = function() {
     if ($(this).val()) {
       $('project').hide();
       var categoryDisplay = $(this).val();
-      $('project').filter("[data-category = '" + categoryDisplay + "']").fadeIn();
-      $('#category-filter').reset();
+      $('project').filter("[data-category = '" + categoryDisplay + "']").fadeIn("slow");
     } else {
       $('project').hide();
     }
@@ -28,13 +27,28 @@ projectView.handleCategoryFilter = function() {
 };
 
 projectView.handleMainNav = function() {
-  $('.main-nav').on('click', '.tab', function() {
+  $('.main-nav li').on('click', function() {
     $('.tab-content').hide();
     $('#' + $(this).data('content')).show();
   });
 
   $('.main-nav .tab:first').click(); // Let's now trigger a click on the first .tab element, to set up the page.
 };
+
+var stickyNavTop = $('.main-nav').offset().top;
+
+projectView.stickyNav = function(){
+  var scrollTop = $(window).scrollTop();
+  if(scrollTop > stickyNavTop) {
+    $('.main-nav').addClass('sticky');
+  } else {
+    $('.main-nav').removeClass('sticky');
+  }
+};
+
+$(window).scroll(function(){
+    projectView.stickyNav();
+});
 
 $(document).ready(function(){
 projectView.populateFilters();

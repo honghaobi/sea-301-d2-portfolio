@@ -1,7 +1,8 @@
 body {
-  line-height: 1.5;
   font-size: 100%;
-  color: #313131;
+  background-color: #B8D5DD;
+  font-family: 'Cabin', sans-serif;
+
 }
 
 hr {
@@ -23,7 +24,7 @@ address {
 =======================================*/
 
 a, a:link, a:active {
-  color: #777;
+  color: #B8D5DD;
 }
 
 a:hover, a:focus {
