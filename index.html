@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Henry's Portfolio</title>
+    <link rel="stylesheet" href="vendor/styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/modules.css">
     <link href='https://fonts.googleapis.com/css?family=Cabin:400,500,700' rel='stylesheet' type='text/css'>
@@ -25,7 +26,7 @@
           </ul>
         </nav>
         <section id="projects" class="tab-content">
-          <div>
+          <div id="selection">
             <ul id="filters">
               <li>
                 <select id="category-filter">
@@ -35,16 +36,24 @@
             </ul>
           </div>
           <project class="template" data-category="web">
-            <header>
-              <h1>Project Name</h1>
-              <div class="byline">
-                By <address>henry bi</address>
-                created <time pubdate datetime="2000-01-01">Time</time>
+            <div class="project-container">
+              <div class="text-container">
+                <header>
+                  <h1>Project Name</h1>
+                  <div class="byline">
+                    By <address>henry bi</address>
+                    created <time pubdate datetime="2000-01-01">Time</time>
+                  </div>
+                  <section class="project-about"></section>
+                </header>
               </div>
-            </header>
-            <section class="project-about"></section>
+              <div class="img-container">
+                <img src="">
+              </div>
+            </div>
           </project>
         </section>
+
         <section id="about" class="tab-content">
           <header>
             who is henry bi?

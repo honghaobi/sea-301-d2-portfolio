@@ -2,6 +2,7 @@
 var projectView = {};
 
 projectView.populateFilters = function() {
+  $('.template').hide();
   $('project').each(function() {
     if (!$(this).hasClass('template')) {
       var val = $(this).attr('data-category');
@@ -23,6 +24,7 @@ projectView.handleCategoryFilter = function() {
       $('project').hide();
     }
     $('#project-filter').val('');
+    $('.template').hide();
   });
 };
 
@@ -46,12 +48,22 @@ projectView.stickyNav = function(){
   }
 };
 
+projectView.hoverProject = function(){
+  $('img', this).on('hover', function(){
+    console.log('hoverWorks');
+    $('header').fadeIn();
+  });
+};
+
+
+
 $(window).scroll(function(){
-    projectView.stickyNav();
+  projectView.stickyNav();
 });
 
 $(document).ready(function(){
-projectView.populateFilters();
-projectView.handleCategoryFilter();
-projectView.handleMainNav();
+  projectView.populateFilters();
+  projectView.handleCategoryFilter();
+  projectView.handleMainNav();
+  projectView.hoverProject();
 });
