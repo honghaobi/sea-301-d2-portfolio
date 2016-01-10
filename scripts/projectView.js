@@ -49,10 +49,17 @@ projectView.stickyNav = function(){
 };
 
 projectView.hoverProject = function(){
-  $('img', this).on('hover', function(){
-    console.log('hoverWorks');
-    $('header').fadeIn();
+  $('.img-container img').on('mouseenter', this, function(){
+    $(this).css('opacity','.8');
+    $(this).parent().parent().find('header').css('opacity','.8').toggle('slide');
+
   });
+
+  $('.img-container img').on('mouseleave', this, function(){
+    $(this).css('opacity','1');
+  });
+
+
 };
 
 
