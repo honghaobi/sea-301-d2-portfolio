@@ -19,7 +19,7 @@ projectView.handleCategoryFilter = function() {
     if ($(this).val()) {
       $('project').hide();
       var categoryDisplay = $(this).val();
-      $('project').filter("[data-category = '" + categoryDisplay + "']").fadeIn("slow");
+      $('project').filter('[data-category = "' + categoryDisplay + '"]').fadeIn('slow');
     } else {
       $('project').hide();
     }
@@ -51,26 +51,28 @@ projectView.stickyNav = function(){
 projectView.hoverProject = function(){
   $('.img-container img').on('mouseenter', this, function(){
     $(this).css('opacity','.8');
-    $(this).parent().parent().find('header').css('opacity','.8').toggle('slide');
-
   });
 
   $('.img-container img').on('mouseleave', this, function(){
     $(this).css('opacity','1');
   });
 
-
+  $('.img-container img').on('click', this, function(){
+    $(this).parent().parent().find('header').css('opacity','.8').toggle('slide');
+  });
 };
-
 
 
 $(window).scroll(function(){
   projectView.stickyNav();
 });
 
-$(document).ready(function(){
+projectView.initIndexPage = function() {
+  Project.all.forEach(function(a){
+    $('#projects').append(a.toHtml());
+  });
   projectView.populateFilters();
   projectView.handleCategoryFilter();
   projectView.handleMainNav();
   projectView.hoverProject();
-});
+};
