@@ -54,23 +54,33 @@
     } else {
       $('#bg').removeClass('stickyBehind');
     }
-
-
   };
 
-  projectView.hoverProject = function(){
-    $('.img-container img').on('mouseenter', this, function(){
-      $(this).css('opacity','.8');
-    });
+  // projectView.hoverProject = function(){
+  //   $('.img-container img').on('mouseenter', this, function(){
+  //     $(this).css('opacity','.8');
+  //   });
+  //
+  //   $('.img-container img').on('mouseleave', this, function(){
+  //     $(this).css('opacity','1');
+  //   });
+  // };
 
-    $('.img-container img').on('mouseleave', this, function(){
-      $(this).css('opacity','1');
-    });
-
+  projectView.clickProject = function(){
+    // $('.img-container img').on('click', this, function(){
+    //   $(this).parent().parent().find('header').css('opacity','.8').toggle('slide');
+    // });
+    $('#shade').hide();
     $('.img-container img').on('click', this, function(){
-      $(this).parent().parent().find('header').css('opacity','.8').toggle('slide');
+      $(this).clone().appendTo('#lb').addClass('lightbox');
+      $('#shade').show();
+    });
+    $('#lb').on('click', this, function(){
+      $(this).children().remove();
+      $('#shade').hide();
     });
   };
+
 
 
   $(window).scroll(function(){
@@ -84,7 +94,8 @@
     projectView.populateFilters();
     projectView.handleCategoryFilter();
     projectView.handleMainNav();
-    projectView.hoverProject();
+    // projectView.hoverProject();
+    projectView.clickProject();
   };
 
   module.projectView = projectView;
