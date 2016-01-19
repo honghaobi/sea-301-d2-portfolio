@@ -5,6 +5,7 @@
   aboutController.index = function() {
     $('main > section').hide();
     $('#about').show();
+    repos.requestRepos(repoView.index);
 
   };
 
