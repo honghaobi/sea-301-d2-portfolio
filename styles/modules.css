@@ -43,6 +43,7 @@ main>header {
 .main-nav li a:hover {
   text-decoration: none;
   text-transform: uppercase;
+  transition: 1s all;
 
 }
 
