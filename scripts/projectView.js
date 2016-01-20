@@ -19,6 +19,7 @@
   projectView.handleCategoryFilter = function() {
     $('#category-filter').on('change', function() {
       if ($(this).val()) {
+        $('.template').hide();
         $('project').hide();
         var categoryDisplay = $(this).val();
         $('project').filter('[data-category = "' + categoryDisplay + '"]').fadeIn('slow');
@@ -26,7 +27,6 @@
         $('project').hide();
       }
       $('#project-filter').val('');
-      $('.template').hide();
     });
   };
 
