@@ -3,8 +3,8 @@
 
   projectsController.index = function() {
     Project.fetchAll(projectView.initIndexPage);
-    $('#about').hide();
-    $('#projects').show();
+    $('#about').fadeOut();
+    $('#projects').fadeIn();
   };
 
   module.projectsController = projectsController;

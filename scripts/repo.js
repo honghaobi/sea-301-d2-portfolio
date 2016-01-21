@@ -4,15 +4,12 @@
   repos.all = [];
 
   repos.requestRepos = function(callback) {
-    // Done: How would you like to fetch your repos? Don't forget to call the callback.
     $.get( '/github/users/honghaobi/repos' + '?per_page=100' + '&sort=updated',
-            function( data ) {
-              repos.all = data;
-            }).done(callback);
+        function( data ) {
+          repos.all = data;
+        }).done(callback);
   };
 
-  // DONE: Model method that filters the full collection for repos with a particular attribute.
-  // You could use this to filter all repos that have a non-zero `forks_count`, `stargazers_count`, or `watchers_count`.
   repos.with = function(attr) {
     return repos.all.filter(function(repo) {
       return repo[attr];
