@@ -2,10 +2,9 @@
   var aboutController = {};
 
   aboutController.index = function() {
-    $('main > section').fadeOut();
-    $('#about').fadeIn();
     repos.requestRepos(repoView.index);
-
+    $('#projects').fadeOut(100);
+    $('#about').fadeIn(800);
   };
 
   module.aboutController = aboutController;

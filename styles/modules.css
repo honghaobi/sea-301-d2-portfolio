@@ -18,7 +18,7 @@ main>header {
 
 .main-nav {
   list-style: none;
-  background-color: #443424;
+  background-color: #4A5557;
   width: 100%;
   height: 28px;
   transition: 1s all;
@@ -42,7 +42,7 @@ main>header {
 
 .main-nav li a:hover {
   text-decoration: none;
-  text-transform: uppercase;
+  text-transform: upperca;
 }
 
 #selection select {
@@ -54,7 +54,7 @@ main>header {
    border: 0px;
    width: 170px;
    *width: 350px;
-   *background: #2B3F44;
+   *background: #92909E;
    -webkit-appearance: none;
 }
 
@@ -65,7 +65,7 @@ main>header {
    width: 100%;
    height: 60px;
    text-align: center;
-   background: #2B3F44;
+   background: #92909E;
 }
 
 .sticky {
@@ -75,7 +75,7 @@ main>header {
     top: 0;
     z-index: 100;
     border-top: 0;
-    opacity: .8;
+    opacity: .85;
     height: 40px;
 }
 .stickyBehind {
@@ -93,7 +93,7 @@ main>header {
   font-size: 40px;
   font-weight: 100;
   background-color: inherit;
-  color: #443424;
+  color: #4A5557;
   margin: 0;
 
 }
@@ -102,9 +102,27 @@ main>header {
   margin: 0 auto;
   font-family: 'Pacifico', cursive;
   font-size: 28px;
-  color: #2B3F44;
+  color: #92909E;
   margin: 0;
 
+}
+
+.opacity100{
+  opacity: 1;
+  transition: .5s all;
+}
+
+.opacity70{
+  opacity: .7;
+  transition: .5s all;
+}
+
+.scale105{
+  transform: scale(1.05);
+}
+
+.scale100{
+  transform: scale(1);
 }
 
 .project-container{
@@ -139,7 +157,7 @@ main>header {
   margin-left: 50px;
   margin-right: 100px;
   min-width: 200px;
-  color: #2B3F44;
+  color: #92909E;
 }
 
 
@@ -165,7 +183,7 @@ main>header {
   width: 100%;
   height: 100%;
   opacity: .6;
-  background-color: #2B3F44;
+  background-color: #92909E;
   z-index: 998;
 }
 
@@ -238,7 +256,7 @@ footer{
   bottom: 0px;
   width: 100%;
   height: 40px;
-  background-color: #2B3F44;
+  background-color: #92909E;
   color: #B8D5DD;
   text-align: right;
   opacity: .8;
@@ -295,7 +313,7 @@ main>header {
 
 .main-nav {
   list-style: none;
-  background-color: #443424;
+  background-color: #4A5557;
   width: 100%;
   height: 130px;
 }
@@ -324,7 +342,7 @@ main>header {
     top: 0;
     z-index: 100;
     border-top: 0;
-    opacity: .8;
+    opacity: .85;
     height: 140px;
 }
 #about-container {
@@ -338,7 +356,7 @@ main>header {
 #about-container>h1 {
   text-align: center;
   padding-top: 10px;
-  color: #2B3F44;
+  color: #92909E;
 }
 
 #about-container>p {
@@ -346,7 +364,7 @@ main>header {
   margin-top: 10px;
   padding-left: 10px;
   padding-right: 10px;
-  color: #2B3F44;
+  color: #92909E;
 }
 }
 
