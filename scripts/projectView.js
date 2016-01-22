@@ -20,7 +20,7 @@
     var animation_begin_pos = 0;
     var animation_end_pos = 1000;
     var beginning_color = new $.Color( 'rgb(226,235,236)' );
-    var ending_color = new $.Color( 'rgb(230,250,247)' );
+    var ending_color = new $.Color( 'rgb(224,234,202)' );
     var percentScrolled = scroll_pos / ( animation_end_pos - animation_begin_pos );
     var newRed = beginning_color.red() + ( ( ending_color.red() - beginning_color.red() ) * percentScrolled );
     var newGreen = beginning_color.green() + ( ( ending_color.green() - beginning_color.green() ) * percentScrolled );
